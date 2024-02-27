@@ -1,0 +1,26 @@
+package com.app.service;
+
+import java.util.List;
+
+import org.springframework.web.multipart.MultipartFile;
+
+import com.app.Dto.FlatDto;
+import com.app.entities.Flat;
+import com.app.entities.Image;
+import com.app.entities.Owner;
+
+public interface OwnerService {
+
+	public List<Owner> ownerList();
+	
+	public String addImage(MultipartFile[] image,long id);
+	
+	public String addFlat(FlatDto flatDto,MultipartFile[] image);
+	
+	public List<Image> getImage(long id);
+	
+	public Owner updateOwner(Owner owner);
+			
+	public List<Flat> flatList();
+
+}
